@@ -1,0 +1,22 @@
+{
+  "name": "metaball",
+  "components": {
+    "Sprite": {
+      "shader": "shaders/density-field.json",
+      "layers": [ "density-field" ],
+      "width": 256,
+      "height": 256,
+      "xOrigin": 0.5,
+      "yOrigin": 0.5
+    },
+    "Randomizer": {
+      "xRange": 512,
+      "yRange": 512
+    },
+    "Metaball": {
+      "xRange": 512,
+      "yRange": 512,
+      "speed": 100
+    }
+  }
+}

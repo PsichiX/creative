@@ -1,0 +1,25 @@
+{
+  "vertex": "shaders/sprite.vert",
+  "fragment": "shaders/color.frag",
+  "layout": {
+    "aPosition": {
+      "size": 2,
+      "stride": 4,
+      "offset": 0
+    },
+    "aTexCoord": {
+      "size": 2,
+      "stride": 4,
+      "offset": 2
+    }
+  },
+  "uniforms": {
+    "uModelView": "model-view-matrix",
+    "uProjection": "projection-matrix",
+    "uColor": [1, 1, 1, 1]
+  },
+  "blending": {
+    "source": "src-alpha",
+    "destination": "one"
+  }
+}

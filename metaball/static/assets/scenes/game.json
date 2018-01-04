@@ -1,0 +1,79 @@
+{
+  "name": "root",
+  "components": {},
+  "children": [
+    {
+      "name": "scene",
+      "children": [
+        {
+          "name": "density-field-camera",
+          "components": {
+            "Camera2D": {
+              "zoomOut": 2,
+              "captureEntity": "..",
+              "layer": "density-field",
+              "renderTargetId": "~density-field~"
+            }
+          }
+        },
+        {
+          "name": "metaball",
+          "transform": {
+            "scale": [1.5, 1.5]
+          },
+          "components": {
+            "PrefabInstance": {
+              "asset": "prefabs/metaball.json",
+              "count": 5,
+              "components": {
+                "Sprite": {
+                  "color": [0, 1, 1, 1]
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "metaball",
+          "transform": {
+            "scale": [1.5, 1.5]
+          },
+          "components": {
+            "PrefabInstance": {
+              "asset": "prefabs/metaball.json",
+              "count": 5,
+              "components": {
+                "Sprite": {
+                  "color": [1, 0, 1, 1]
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "overlay",
+      "components": {
+        "Camera2D": {},
+        "VerticesRenderer": {
+          "shader": "shaders/overlay.json",
+          "vertices": [
+            -1, -1, 0, 0,
+            1, -1, 1, 0,
+            1, 1, 1, 1,
+            -1, 1, 0, 1
+          ],
+          "indices": [0, 1, 2, 2, 3, 0],
+          "overrideSamplers": {
+            "sBase": {
+              "channel": 0,
+              "texture": "~density-field~",
+              "filtering": "linear"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
