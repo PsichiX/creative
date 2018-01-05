@@ -1,9 +1,16 @@
 import { lazyInitialization, System, vec4 } from 'oxygen-core';
 import Randomizer from './Randomizer';
 import Metaball from './Metaball';
+import MouseController from './MouseController';
 
 lazyInitialization({
-  render: { screen: 'screen-0' },
+  render: {
+    screen: 'screen-0',
+    extensions: [
+      'OES_texture_float',
+      'OES_texture_float_linear'
+    ]
+  },
   store: { id: 'oxygen-core' }
 });
 
@@ -15,6 +22,7 @@ const {
 
 EntitySystem.registerComponent('Randomizer', Randomizer.factory);
 EntitySystem.registerComponent('Metaball', Metaball.factory);
+EntitySystem.registerComponent('MouseController', MouseController.factory);
 
 vec4.set(RenderSystem.clearColor, 0, 0, 0, 1);
 

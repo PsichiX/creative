@@ -1,6 +1,7 @@
 {
   "assets": [
     "shader://shaders/density-field.json",
+    "shader://shaders/density-shape.json",
     "shader://shaders/color.json",
     "shader://shaders/overlay.json",
     "shader://shaders/sprite-transparent.json",

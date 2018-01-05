@@ -18,5 +18,21 @@
       "yRange": 512,
       "speed": 100
     }
-  }
+  },
+  "children": [
+    {
+      "name": "animation",
+      "active": false,
+      "components": {
+        "Sprite": {
+          "shader": "shaders/animation-field.json",
+          "layers": [ "animation-field" ],
+          "width": 256,
+          "height": 256,
+          "xOrigin": 0.5,
+          "yOrigin": 0.5
+        }
+      }
+    }
+  ]
 }
